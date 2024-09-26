@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { GlobalStyle } from "./Styles/globalStyles";
 import { useFormik } from "formik";
+import { signUpSchema } from "./schemas";
 
 const initialValues = {
   name: "",
@@ -11,18 +12,20 @@ const initialValues = {
 
 const Registration = () => {
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    
     useFormik({
       initialValues: initialValues,
+      validationSchema: signUpSchema,
       onSubmit : (values) => {
-        console.log("🚀 ~ file: Registration.jsx ~ line 25 ~ Registration ~ values", values)      
-      }
-    })
-
-  console.log(
-    "🚀 ~ file: Registration.jsx ~ line 25 ~ Registration ~ errors",
-    errors
-  );
+        console.log(
+          "🚀 ~ file: Registration.jsx ~ line 18 ~ Registration ~ values", 
+          values
+        );
+      },
+    });
+    console.log(
+      "🚀 ~ file: Registration.jsx ~ line 26 ~ Registration ~ errors", 
+      errors
+    );
 
   return (
     <>
@@ -34,7 +37,7 @@ const Registration = () => {
               <div className="modal-left">
                 <h1 className="modal-title">Welcome!</h1>
                 <p className="modal-desc">
-                  To the thapa technical website for programmers.
+                  To the developer-rak technical website for programmers.
                 </p>
                 <form onSubmit={handleSubmit}>
                   <div className="input-block">

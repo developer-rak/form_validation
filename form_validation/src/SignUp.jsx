@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { GlobalStyle } from "./Styles/globalStyles";
 import { useFormik } from "formik";
-import { signupSchema } from "./schemas";
+import { signUpSchema } from "./schemas";
 
 const SignUp = () => {
   const initialValues = {
@@ -14,7 +14,7 @@ const SignUp = () => {
   const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
     useFormik({
       initialValues,
-      validationSchema: signupSchema,
+      validationSchema: signUpSchema,
       validateOnChange: true,
       validateOnBlur: false,
       //// By disabling validation onChange and onBlur formik will validate on submit.
@@ -37,7 +37,7 @@ const SignUp = () => {
               <div className="modal-left">
                 <h1 className="modal-title">Welcome!</h1>
                 <p className="modal-desc">
-                  To the thapa technical website for programmers.
+                  To the developer-rak technical website for programmers.
                 </p>
                 <form onSubmit={handleSubmit}>
                   <div className="input-block">
