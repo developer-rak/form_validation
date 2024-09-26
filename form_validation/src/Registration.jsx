@@ -15,11 +15,12 @@ const Registration = () => {
     useFormik({
       initialValues: initialValues,
       validationSchema: signUpSchema,
-      onSubmit : (values) => {
+      onSubmit : (values, action) => {
         console.log(
           "🚀 ~ file: Registration.jsx ~ line 18 ~ Registration ~ values", 
           values
         );
+        action.resetForm();
       },
     });
     console.log(
@@ -35,7 +36,7 @@ const Registration = () => {
           <div className="modal">
             <div className="modal-container">
               <div className="modal-left">
-                <h1 className="modal-title">Welcome!</h1>
+                <h1 className="modal-title">Welcome! <span style={{fontSize: 10}}>Registration</span></h1>
                 <p className="modal-desc">
                   To the developer-rak technical website for programmers.
                 </p>

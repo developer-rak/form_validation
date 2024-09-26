@@ -35,7 +35,7 @@ const SignUp = () => {
           <div className="modal">
             <div className="modal-container">
               <div className="modal-left">
-                <h1 className="modal-title">Welcome!</h1>
+                <h1 className="modal-title">Welcome! <span style={{fontSize: 10}}>Sign Up</span></h1>
                 <p className="modal-desc">
                   To the developer-rak technical website for programmers.
                 </p>

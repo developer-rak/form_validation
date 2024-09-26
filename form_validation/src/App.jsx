@@ -1,9 +1,9 @@
-import SignUp from "./SignUp";
-// import Registration from "./Registration";
+// import SignUp from "./SignUp";
+import Registration from "./Registration";
 
 const App = () => {
-  return <SignUp />;
-  // return <Registration />;
+  // return <SignUp />;
+  return <Registration />;
 };
 
 export default App;
